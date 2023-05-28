@@ -9,8 +9,6 @@ const { sub } = JSON.parse(
   Buffer.from(process.env.DUOLINGO_JWT.split('.')[1], 'base64').toString(),
 )
 
-console.log({ sub })
-
 const { fromLanguage, learningLanguage, xpGains } = await fetch(
   `https://www.duolingo.com/2017-06-30/users/${sub}?fields=fromLanguage,learningLanguage,xpGains`,
   {
@@ -18,9 +16,11 @@ const { fromLanguage, learningLanguage, xpGains } = await fetch(
   },
 ).then(response => response.json())
 
-console.log({ skillId: xpGains.find(xpGain => xpGain.skillId).skillId })
-
 for (let i = 0; i < process.env.LESSONS; i++) {
+  // Random Sleep
+  await new Promise(r => setTimeout(r, Math.random() * 10000))
+
+  //Start of Script
   const session = await fetch('https://www.duolingo.com/2017-06-30/sessions', {
     body: JSON.stringify({
       "challengeTypes":[
