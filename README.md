@@ -18,6 +18,7 @@ document.cookie
 ```
 
 Then copy the token given and set a [repository secret](https://docs.github.com/actions/learn-github-actions/variables) with the name `DUOLINGO_JWT` in your GitHub Actions settings.
+*This uses the Japanese Course (Eng) Unit 1 Lesson 1. Needs to have the first lesson "Use hiragana" maxed after earning the Unit 1 Legendary trophy.
 
 ## Workflows
 
