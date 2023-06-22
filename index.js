@@ -5,6 +5,8 @@ const headers = {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
 }
 
+const SESSION_PAYLOAD = {"challengeTypes":["assist","characterIntro","characterMatch","characterPuzzle","characterSelect","characterTrace","completeReverseTranslation","definition","dialogue","form","freeResponse","gapFill","judge","listen","listenComplete","listenMatch","match","name","listenComprehension","listenIsolation","listenTap","partialListen","partialReverseTranslate","patternTapComplete","readComprehension","select","selectPronunciation","selectTranscription","syllableTap","syllableListenTap","speak","tapCloze","tapClozeTable","tapComplete","tapCompleteTable","tapDescribe","translate","transliterate","typeCloze","typeClozeTable","typeCompleteTable","writeComprehension"],"fromLanguage":"en","isFinalLevel":false,"isV2":true,"juicy":true,"learningLanguage":"ja","smartTipsVersion":2,"isCustomIntroSkill":false,"isGrammarSkill":false,"levelIndex":0,"showGrammarSkillSplash":false,"skillId":"060ce4633b12e01d03c5baa22fddd7ab","type":"LESSON","levelSessionIndex":0};
+
 const { sub } = JSON.parse(
   Buffer.from(process.env.DUOLINGO_JWT.split('.')[1], 'base64').toString(),
 )
@@ -19,10 +21,10 @@ const { fromLanguage, learningLanguage, xpGains } = await fetch(
 for (let i = 0; i < process.env.LESSONS; i++) {
   // Random Sleep
   await new Promise(r => setTimeout(r, Math.random() * 10000))
-  const session_payload = {"challengeTypes":["assist","characterIntro","characterMatch","characterPuzzle","characterSelect","characterTrace","completeReverseTranslation","definition","dialogue","form","freeResponse","gapFill","judge","listen","listenComplete","listenMatch","match","name","listenComprehension","listenIsolation","listenTap","partialListen","partialReverseTranslate","patternTapComplete","readComprehension","select","selectPronunciation","selectTranscription","syllableTap","syllableListenTap","speak","tapCloze","tapClozeTable","tapComplete","tapCompleteTable","tapDescribe","translate","transliterate","typeCloze","typeClozeTable","typeCompleteTable","writeComprehension"],"fromLanguage":"en","isFinalLevel":false,"isV2":true,"juicy":true,"learningLanguage":"ja","smartTipsVersion":2,"isCustomIntroSkill":false,"isGrammarSkill":false,"levelIndex":0,"showGrammarSkillSplash":false,"skillId":"060ce4633b12e01d03c5baa22fddd7ab","type":"LESSON","levelSessionIndex":0};
+  
   //Start of Script
   const session = await fetch('https://www.duolingo.com/2017-06-30/sessions', {
-    body: JSON.stringify(session_payload),
+    body: JSON.stringify(SESSION_PAYLOAD),
     headers,
     method: 'POST',
   }).then(response => response.json())
