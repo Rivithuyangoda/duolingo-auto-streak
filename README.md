@@ -23,7 +23,7 @@ For SESSION_PAYLOAD, replace the sample SESSION_PAYLOAD with your own:
 1. While in Duolingo web app, open developer console [F12], navigate to 'Network' tab, proceed to start a lesson.
 2. Find the 'sessions' request, then under 'Payload' tab > 'view source' then copy & paste it to SESSION_PAYLOAD.
 *You might need to refresh the webpage (CTRL + R) to find the 'sessions' request.
-3. You're all set, head to Github Actions > 'Do a Duolingo lesson' to do a test run.
+3. You're all set, head to Github Actions > 'Do a Duolingo lesson' > 'Run workflow' to do a test run.
 
 ## Workflows
 
