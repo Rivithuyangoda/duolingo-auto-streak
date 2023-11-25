@@ -4,7 +4,7 @@
 
 <img src="duo.svg" width="128px"/>
 
-Streak keeper and XP farm for Duolingo. Never get demoted again!
+Streak keeper and XP farm for Duolingo that can be automated using Github Actions. Never get demoted again!
 
 ### How to use
 1. [Fork this repository](https://github.com/rfoel/duolingo/fork)
