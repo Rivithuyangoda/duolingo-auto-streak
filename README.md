@@ -25,7 +25,9 @@ document.cookie
   8. Go the your forked repository and go the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
 For `SESSION_PAYLOAD` in `index.js`, replace the sample SESSION_PAYLOAD with your own:
-Video Guide to retrieve `SESSIONS_PAYLOAD`: ![Video Guide](https://github.com/Sodiumchloridy/duolingo-auto-streak/assets/67376832/68c36a4c-2be8-4dfb-ae3c-ae1ee4ae6b4a)
+Video Guide to retrieve `SESSIONS_PAYLOAD`:
+https://github.com/Sodiumchloridy/duolingo-auto-streak/assets/67376832/8055b571-478e-4e59-9eac-891eae18a560
+
 1. While in Duolingo web app, open developer console [F12], navigate to 'Network' tab, proceed to start a lesson.
 2. Find the 'sessions' request, then under 'Payload' tab > 'view source' then copy & paste it to SESSION_PAYLOAD.
 *You might need to refresh the webpage (CTRL + R) to find the 'sessions' request.
