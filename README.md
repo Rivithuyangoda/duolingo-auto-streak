@@ -21,14 +21,14 @@ document.cookie
   
   5. Go to your forked repository
   6. Go to Settings > Secrets and Variables > Actions . And click the button `New Repository secret`
-  7. For the secret name use `DUOLINGO_JWT` for the secret value use the copied value from step 4.
+  7. For the secret name use `DUOLINGO_JWT` and for the secret value use the copied value from step 4.
   8. Go the your forked repository and go the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
 For `SESSION_PAYLOAD` in `index.js`, replace the sample SESSION_PAYLOAD with your own:
 1. While in Duolingo web app, open developer console [F12], navigate to 'Network' tab, proceed to start a lesson.
 2. Find the 'sessions' request, then under 'Payload' tab > 'view source' then copy & paste it to SESSION_PAYLOAD.
 *You might need to refresh the webpage (CTRL + R) to find the 'sessions' request.
-3. You're all set, head to Github Actions > 'Do a Duolingo lesson' > 'Run workflow' to do a test run.
+3. You're all set, head to Github Actions > 'Do a Duolingo lesson' > 'Run workflow' to do a test run. 
 
 ## Workflows
 
