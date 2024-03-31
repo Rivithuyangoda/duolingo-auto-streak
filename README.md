@@ -27,6 +27,7 @@ document.cookie
 For `SESSION_PAYLOAD` in `index.js`, replace the sample SESSION_PAYLOAD with your own:
 
 Video Guide to retrieve `SESSION_PAYLOAD`: 
+https://www.youtube.com/watch?v=jVcRsE_T8ew
 
 [![Duolingo Sessions Payload Guide](https://img.youtube.com/vi/jVcRsE_T8ew/0.jpg)](https://www.youtube.com/watch?v=jVcRsE_T8ew)
 
