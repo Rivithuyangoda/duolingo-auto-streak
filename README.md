@@ -29,7 +29,10 @@ For `SESSION_PAYLOAD` in `index.js`, replace the sample SESSION_PAYLOAD with you
 Video Guide to retrieve `SESSION_PAYLOAD`: 
 https://www.youtube.com/watch?v=jVcRsE_T8ew
 
-[![Duolingo Sessions Payload Guide](https://img.youtube.com/vi/jVcRsE_T8ew/0.jpg)](https://www.youtube.com/watch?v=jVcRsE_T8ew)
+<div align="center">
+  [![Duolingo Sessions Payload Guide](https://img.youtube.com/vi/jVcRsE_T8ew/0.jpg)](https://www.youtube.com/watch?v=jVcRsE_T8ew)
+
+</div>
 
 1. While in Duolingo web app, open developer console [F12], navigate to 'Network' tab, proceed to start a lesson.
 2. Find the 'sessions' request, then under 'Payload' tab > 'view source' then copy & paste it to SESSION_PAYLOAD.
